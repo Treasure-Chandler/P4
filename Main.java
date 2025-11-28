@@ -8,6 +8,8 @@
  * 4 - Heap sort
  * 5 - Print heap
  * 
+ * There is an example ".txt" file in this project that is included to work with this class.
+ * 
  * @author Treasure Chandler
  */
 
@@ -34,7 +36,7 @@ public class Main {
             System.out.println("4 - Heapsort");
             System.out.println("5 - Print heap");
             System.out.println("6 - Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = input.nextInt();
 
             switch (choice) {
@@ -48,6 +50,8 @@ public class Main {
                     System.out.print("Enter a number to insert: ");
                     int value = input.nextInt();
                     heap.insert(value);
+
+                    System.out.println("Value " + value + " has been inserted.");
                     break;
 
                 case 3:

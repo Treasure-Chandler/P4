@@ -69,12 +69,13 @@ public class MaxHeap {
                 for (int i = size / 2 - 1; i >= 0; i--) {
                     heapifyDown(i);
                 }
-
-                System.out.println("The heap has been successfully built from the file.");
             }
+
+            System.out.println("\nThe heap has been successfully built from the file.");
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File not found." + "\n");
-            e.printStackTrace();
+            System.out.println("\nError: File not found. If there are no \".txt\" files, you " +
+                                "will need to manually create a file with your own values " +
+                                "listed in it.");
         }
     }
 
@@ -102,7 +103,7 @@ public class MaxHeap {
      */
     public int deleteMax() {
         if (size == 0) {
-            System.out.println("Heap is empty.");
+            System.out.println("\nHeap is empty.");
             return -1;
         }
 
@@ -126,7 +127,7 @@ public class MaxHeap {
      */
     public void heapSort() {
         if (size == 0) {
-            System.out.println("The heap is empty. There is nothing to sort.");
+            System.out.println("\nThe heap is empty. There is nothing to sort.");
             return;
         }
 
@@ -146,7 +147,7 @@ public class MaxHeap {
         }
 
         // Print the sorted result
-        System.out.println("Sorted Output:");
+        System.out.println("\nSorted Output:");
 
         for (int i = 0; i < originalSize; i++) {
             System.out.println(heap[i] + " ");
@@ -157,7 +158,7 @@ public class MaxHeap {
         // Destroy heap
         size = 0;
 
-        System.out.println("Heap destroyed after heap sort (size reset to 0).");
+        System.out.println("\nHeap destroyed after heap sort (size reset to 0).");
     }
 
     /**
@@ -165,11 +166,11 @@ public class MaxHeap {
      */
     public void print() {
         if (size == 0) {
-            System.out.println("Heap is empty.");
+            System.out.println("\nHeap is empty.");
             return;
         }
 
-        System.out.println("Heap elements: ");
+        System.out.println("\nHeap elements: ");
         for (int i = 0; i < size; i++) {
             System.out.println(heap[i] + " ");
         }
